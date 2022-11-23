@@ -10,7 +10,14 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: php-apache
-    targetCPUUtilizationPercentage: 1
+    resources:
+      requests:
+        memory: "64Mi"
+        cpu: "250m"
+      limits:
+        memory: "128Mi"
+        cpu: "250m"
+  targetCPUUtilizationPercentage: 1
 status:
   currentReplicas: 0
   desiredReplicas: 0
