@@ -2,7 +2,7 @@ apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
   creationTimestamp: null
-  name: php-apache
+  name: pacman
 spec:
   maxReplicas: 5
   minReplicas: 1
