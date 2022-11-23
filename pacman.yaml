@@ -20,8 +20,3 @@ spec:
         image: ghcr.io/fernando-afo/pacman:2.0
         ports:
         - containerPort: 80
-        resources:
-          requests:
-            cpu: {{ .Values.request.cpu }}
-          limits:
-            cpu: {{ .Values.limits.cpu }}
