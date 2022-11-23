@@ -13,3 +13,5 @@ spec:
             name: pacman
             port:
               number: 8080
+        path: /
+        pathType: Prefix
