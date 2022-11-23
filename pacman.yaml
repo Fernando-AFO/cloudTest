@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: pacman
+  name: pacman
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: pacman
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: pacman
+    spec:
+      containers:
+      - name: fernando-afo-pacman
+        image: ghcr.io/fernando-afo/pacman:2.0
+        ports:
+        - containerPort: 80
