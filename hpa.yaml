@@ -19,5 +19,5 @@ spec:
         type: Utilization
         averageUtilization: 10
 status:
-  currentReplicas: 0
-  desiredReplicas: 0
+  currentReplicas: 3
+  desiredReplicas: 3
