@@ -4,13 +4,15 @@ metadata:
   creationTimestamp: null
   name: pacman
 spec:
+  behavior:
+    scaleDown:
+      stabilizationWindowSeconds: 20
   maxReplicas: 5
-  minReplicas: 1
+  minReplicas: 2
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
     name: pacman
-  targetCPUUtilizationPercentage: 1
   metrics:
   - type: Resource
     resource:
