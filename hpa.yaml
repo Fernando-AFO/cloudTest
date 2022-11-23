@@ -2,7 +2,7 @@ apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   creationTimestamp: null
-  name: pacman-hpa
+  name: pacman
 spec:
   maxReplicas: 5
   minReplicas: 1
@@ -11,13 +11,13 @@ spec:
     kind: Deployment
     name: pacman
   targetCPUUtilizationPercentage: 1
-status:
-  currentReplicas: 0
-  desiredReplicas: 0
-metrics:
+  metrics:
   - type: Resource
     resource:
       name: cpu
       target:
         type: Utilization
         averageUtilization: 10
+status:
+  currentReplicas: 0
+  desiredReplicas: 0
