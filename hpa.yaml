@@ -2,7 +2,7 @@ apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   creationTimestamp: null
-  name: pacman
+  name: pacman-hpa
 spec:
   behavior:
     scaleDown:
