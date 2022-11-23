@@ -5,8 +5,8 @@ metadata:
   name: pacman
 spec:
   rules:
-  - host: pacman.local
-    http:
+  #- host: pacman.local
+  - http:
       paths:
       - backend:
           service:
